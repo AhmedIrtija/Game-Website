@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="SudokuStyle.css">
+    <script src="Sudoku.js" defer></script>
+    <title>Sudoku</title>
+</head>
+
+
+<body>
+    <header class="mainHeader">
+        <a href="index.html" target="_parent">
+            <h1>GameHub<img src="images/logo.png" alt="GameHub logo"></h1>
+        </a>
+        <div class="title">
+            <p>Sudoku</p>
+        </div>
+    </header>
+
+
+    <div class="instruction">
+        <p>
+            1. Set up your 9x9 grid, divided into nine 3x3 regions. <br>
+            2. Your goal: skillfully fill the grid with numbers 1 through 9. <br>
+            3. Remember, each row, column, and region must have every number once, no duplicates allowed!<br>
+            4. Begin with some numbers already provided, your starting clues.<br>
+            5. Engage your mind in strategic thinking and logical deduction to solve the puzzle.<br>
+            6. Complete the grid to win. Good luck!<br>
+        </p>
+    </div>
+    
+    <div id="setup-game">
+        <div id="diff">
+            <h3>Choose Difficulty: </h3>
+            <label><input id="diff-1" type="radio" name="diff" value="easy" checked>Easy</label>
+            <label><input id="diff-2" type="radio" name="diff" value="medium" >Medium</label>
+            <label><input id="diff-3" type="radio" name="diff" value="hard" >Hard</label>
+        </div>
+        <div id="time">
+            <h3>Choose Time: </h3>
+            <label><input id="time-1" type="radio" name="time" value="three" checked>3 Min</label>
+            <label><input id="time-2" type="radio" name="time" value="five">5 Min</label>
+            <label><input id="time-3" type="radio" name="time" value="ten">10 Min</label>
+        </div>
+        <div id="theme">
+            <h3>Choose Theme: </h3>
+            <label><input id="theme-1" type="radio" name="theme" value="Default" checked>Default</label>
+            <label><input id="theme-2" type="radio" name="theme" value="Inverse">Inverse</label>
+        </div>
+    </div>
+    
+    <button id="start-btn">Create New Game!</button>
+
+    <div id="stats">
+        <p id="timer"></p>
+        <p id="lives"></p>
+    </div>
+
+    <div id="game">
+        <div id="board"></div>
+        <div id="number-container" class="hidden">
+            <p id="one">1</p>
+            <p id="two">2</p>
+            <p id="three">3</p>
+            <p id="four">4</p>
+            <p id="five">5</p>
+            <p id="six">6</p>
+            <p id="seven">7</p>
+            <p id="eight">8</p>
+            <p id="nine">9</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Ahmed Irtija. All Rights Reserved</p>
+    </footer>
+</body>
+</html>
